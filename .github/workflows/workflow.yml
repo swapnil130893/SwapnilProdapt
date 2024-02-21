@@ -81,4 +81,5 @@ jobs:
           nowInstallInstance: ${{ secrets.NOW_TEST_INSTANCE }}
           appSysID: ${{ secrets.APP_SYS_ID }}
       
-      
+    outputs:
+      publishversion: ${{ steps.version.outputs.publishversion }}
