@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fe54f1051b6842d0d20b9641b24bcbd7" label="Swapnil_prodapt" max_length="40" name="x_prna_prodapt_swa_swapnil_prodapt" type="collection">
+        <element label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>
