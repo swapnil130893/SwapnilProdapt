@@ -55,7 +55,7 @@ jobs:
           job-name: 'Build'
           sonar-host-url: ${{ secrets.SONAR_URL }}
           sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}
-            
+          
       - name: ServiceNow CI/CD Publish App
         id: publish_app
         uses: ServiceNow/sncicd-publish-app@2.0.1
@@ -76,7 +76,7 @@ jobs:
     # what to install
     outputs:
       publishversion: ${{ steps.publish_app.outputs.newVersion }}
-
+          
   test:
     # Purpose of this job is to Install App from the app repo for the version 
     # published in the build job to a Test instance, then run an ATF Test Suite 
