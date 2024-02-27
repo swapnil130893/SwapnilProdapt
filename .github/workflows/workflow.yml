@@ -98,7 +98,7 @@ jobs:
           version: ${{ needs.build.outputs.publishversion }}
           # Only applicable if Application Customization is active. 
           # Version of the base application on which to apply the customizations
-          #baseAppVersion: '1.2.3'
+          #baseAppVersion: '1.2.3'.
           # Only applicable if Application Customization is active and the associated 
           # application is a higher version than the currently installed version
           # Default: false
