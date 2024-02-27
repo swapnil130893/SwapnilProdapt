@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_prna_prodapt_swa.Feeture_1234</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Feeture_1234</name>
+        <script><![CDATA[var Feeture_1234 = Class.create();
+Feeture_1234.prototype = {
+    initialize: function() {
+    },
+	//Testing 
+    type: 'Feeture_1234'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>7042</sys_created_by>
+        <sys_created_on>2024-02-27 14:57:20</sys_created_on>
+        <sys_id>426c48728724ce18ab42fe29cebb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Feeture_1234</sys_name>
+        <sys_package display_value="Prodapt_swapnil" source="x_prna_prodapt_swa">4a72ebac1be40e90d20b9641b24bcb22</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Prodapt_swapnil">4a72ebac1be40e90d20b9641b24bcb22</sys_scope>
+        <sys_update_name>sys_script_include_426c48728724ce18ab42fe29cebb353e</sys_update_name>
+        <sys_updated_by>7042</sys_updated_by>
+        <sys_updated_on>2024-02-27 14:57:20</sys_updated_on>
+    </sys_script_include>
+</record_update>
