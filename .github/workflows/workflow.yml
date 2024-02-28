@@ -87,7 +87,7 @@ jobs:
     # Purpose of this job is to Install App from the app repo for the version 
     # published in the build job to a Test instance, then run an ATF Test Suite 
     # associated with the app. If Test Suite fails, the app should be Rolled Back 
-    # to clean up the persistent Test environment. 
+    # to clean up the persistent Test environment
     needs: build
     name: Install the application to Test Instance
     runs-on: ubuntu-latest
