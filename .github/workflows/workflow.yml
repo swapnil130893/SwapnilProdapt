@@ -99,7 +99,7 @@ jobs:
           # Version of the base application on which to apply the customizations
           #baseAppVersion: '1.2.3'
           # Only applicable if Application Customization is active and the associated 
-          # application is a higher version than the currently installed version
+          # application is a higher version than the currently installed version.
           # Default: false
           autoUpgradeBaseApp: false
         env:
