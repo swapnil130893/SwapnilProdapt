@@ -50,7 +50,12 @@ jobs:
             nowUsername: ${{ secrets.NOW_USERNAME }}
             nowPassword: ${{ secrets.NOW_PASSWORD }}
             nowScanInstance: ${{ secrets.NOW_DEV_INSTANCE }}
-
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' 
+          
       - name: ServiceNow DevOps Unit Test Results
         uses: ServiceNow/servicenow-devops-test-report@v2.0.0
         with:
