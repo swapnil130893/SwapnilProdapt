@@ -35,21 +35,21 @@ jobs:
       #     echo "SN_DEVOPS_PASSWORD: ${{ secrets.SN_DEVOPS_PASSWORD }}"
       #     curl ${{ secrets.SN_INSTANCE_URL }}
     
-      - name: ServiceNow CI/CD Instance Scan
-        uses: ServiceNow/sncicd-instance-scan@2.0.0
-        id: scan
-        with:
-            scantype: full # point, suite_combo, suite_scoped, suite_update
-            #targetTable: <target_table>
-            #targetSysId: <target_sys_id>
-            #comboSysId: <combo_sys_id>
-            #suiteSysId: <suite_sys_id>
-            #appScopeSysIds: <app_scope_sys_ids_comma_separated>
-            #updateSetSysIds: <update_set_sys_ids_comma_separated>
-        env:
-            nowUsername: ${{ secrets.NOW_USERNAME }}
-            nowPassword: ${{ secrets.NOW_PASSWORD }}
-            nowScanInstance: ${{ secrets.NOW_DEV_INSTANCE }}
+      # - name: ServiceNow CI/CD Instance Scan
+      #   uses: ServiceNow/sncicd-instance-scan@2.0.0
+      #   id: scan
+      #   with:
+      #       scantype: full # point, suite_combo, suite_scoped, suite_update
+      #       #targetTable: <target_table>
+      #       #targetSysId: <target_sys_id>
+      #       #comboSysId: <combo_sys_id>
+      #       #suiteSysId: <suite_sys_id>
+      #       #appScopeSysIds: <app_scope_sys_ids_comma_separated>
+      #       #updateSetSysIds: <update_set_sys_ids_comma_separated>
+      #   env:
+      #       nowUsername: ${{ secrets.NOW_USERNAME }}
+      #       nowPassword: ${{ secrets.NOW_PASSWORD }}
+      #       nowScanInstance: ${{ secrets.NOW_DEV_INSTANCE }}
 
       - name: ServiceNow DevOps Sonar Scan Results
         uses: ServiceNow/servicenow-devops-sonar@v2.0.0
