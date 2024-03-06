@@ -27,6 +27,11 @@ jobs:
           nowSourceInstance: ${{ secrets.NOW_DEV_INSTANCE }}
           appSysID: ${{ secrets.APP_SYS_ID }}
           appScope: ${{ secrets.APP_SCOPE }}
+
+      - name: Debugging ServiceNow URL
+        run: |
+          echo "ServiceNow Instance URL: ${{ secrets.SN_INSTANCE_URL }}"
+          curl -I ${{ secrets.SN_INSTANCE_URL }}
       
       # - name: Debug ServiceNow Inputs
       #   run: |
