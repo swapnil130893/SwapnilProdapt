@@ -28,12 +28,12 @@ jobs:
           appSysID: ${{ secrets.APP_SYS_ID }}
           appScope: ${{ secrets.APP_SCOPE }}
       
-      - name: Debug ServiceNow Inputs
-        run: |
-          echo "SN_INSTANCE_URL: ${{ secrets.SN_INSTANCE_URL }}"
-          echo "SN_DEVOPS_USER: ${{ secrets.SN_DEVOPS_USER }}"
-          echo "SN_DEVOPS_PASSWORD: ${{ secrets.SN_DEVOPS_PASSWORD }}"
-          curl ${{ secrets.SN_INSTANCE_URL }}
+      # - name: Debug ServiceNow Inputs
+      #   run: |
+      #     echo "SN_INSTANCE_URL: ${{ secrets.SN_INSTANCE_URL }}"
+      #     echo "SN_DEVOPS_USER: ${{ secrets.SN_DEVOPS_USER }}"
+      #     echo "SN_DEVOPS_PASSWORD: ${{ secrets.SN_DEVOPS_PASSWORD }}"
+      #     curl ${{ secrets.SN_INSTANCE_URL }}
     
       - name: ServiceNow CI/CD Instance Scan
         uses: ServiceNow/sncicd-instance-scan@2.0.0
