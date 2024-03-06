@@ -80,7 +80,7 @@ jobs:
     # This is required to pass the version number output from Publish App 
     # to the input for Install App in the next job! This is because the jobs 
     # run on different Linux instances, so without this Install App won't know
-    # what to install.
+    # what to install
     outputs:
       publishversion: ${{ steps.publish_app.outputs.newVersion }}
           
