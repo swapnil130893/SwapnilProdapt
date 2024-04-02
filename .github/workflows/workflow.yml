@@ -40,34 +40,34 @@ jobs:
           echo "SN_DEVOPS_PASSWORD: ${{ secrets.SN_DEVOPS_PASSWORD }}"
           curl ${{ secrets.SN_INSTANCE_URL }}
     
-      - name: ServiceNow CI/CD Instance Scan
-        uses: ServiceNow/sncicd-instance-scan@2.0.0
-        id: scan
-        with:
-            scantype: full # point, suite_combo, suite_scoped, suite_update
-            #targetTable: <target_table>
-            #targetSysId: <target_sys_id>
-            #comboSysId: <combo_sys_id>
-            #suiteSysId: <suite_sys_id>
-            #appScopeSysIds: <app_scope_sys_ids_comma_separated>
-            #updateSetSysIds: <update_set_sys_ids_comma_separated>
-        env:
-            nowUsername: ${{ secrets.NOW_USERNAME }}
-            nowPassword: ${{ secrets.NOW_PASSWORD }}
-            nowScanInstance: ${{ secrets.NOW_DEV_INSTANCE }}
+      # - name: ServiceNow CI/CD Instance Scan
+      #   uses: ServiceNow/sncicd-instance-scan@2.0.0
+      #   id: scan
+      #   with:
+      #       scantype: full # point, suite_combo, suite_scoped, suite_update
+      #       #targetTable: <target_table>
+      #       #targetSysId: <target_sys_id>
+      #       #comboSysId: <combo_sys_id>
+      #       #suiteSysId: <suite_sys_id>
+      #       #appScopeSysIds: <app_scope_sys_ids_comma_separated>
+      #       #updateSetSysIds: <update_set_sys_ids_comma_separated>
+      #   env:
+      #       nowUsername: ${{ secrets.NOW_USERNAME }}
+      #       nowPassword: ${{ secrets.NOW_PASSWORD }}
+      #       nowScanInstance: ${{ secrets.NOW_DEV_INSTANCE }}
 
-      - name: ServiceNow DevOps Sonar Scan Results
-        uses: ServiceNow/servicenow-devops-sonar@v3.1.0
-        with:
-          devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-          devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
-          instance-url: ${{ secrets.SN_INSTANCE_URL }}
-          tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
-          context-github: ${{ toJSON(github) }}
-          job-name: 'Build'
-          sonar-host-url: ${{ secrets.SONAR_URL }}
-          sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}
-          sonar-org-key: ${{ secrets.SONAR_ORG_KEY }}
+      # - name: ServiceNow DevOps Sonar Scan Results
+      #   uses: ServiceNow/servicenow-devops-sonar@v3.1.0
+      #   with:
+      #     devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+      #     devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+      #     instance-url: ${{ secrets.SN_INSTANCE_URL }}
+      #     tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+      #     context-github: ${{ toJSON(github) }}
+      #     job-name: 'Build'
+      #     sonar-host-url: ${{ secrets.SONAR_URL }}
+      #     sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}
+      #     sonar-org-key: ${{ secrets.SONAR_ORG_KEY }}
           
       - name: ServiceNow CI/CD Publish App
         id: publish_app
