@@ -98,7 +98,7 @@ jobs:
     needs: build
     name: Install the application to Test Instance
     runs-on: ubuntu-latest
-    # Below line can be used to set conditionals for modifying your pipeline as needed.
+    # Below line can be used to set conditionals for modifying your pipeline as needed
     # if: ${{ github.event_name == 'pull_request'}}
     
     steps:
